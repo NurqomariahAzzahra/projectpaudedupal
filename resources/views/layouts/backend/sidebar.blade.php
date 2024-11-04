@@ -2,9 +2,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="/" class="brand-link">
-    <img src="{{ asset('img/icons') }}/laravel.jpg" alt="laravel Logo" class="brand-image img-circle elevation-3"
+    <img src="{{ asset('img/icons') }}/logo.png" alt="laravel Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8">
-    <span class="brand-text font-weight-light">Laraschool</span>
+    <span class="brand-text font-weight-light">Tunas EduPal</span>
   </a>
 
   <!-- Sidebar -->
@@ -40,6 +40,24 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="#" class="nav-link {{ Request::is('admin/profile') ? 'active' : '' }}">
+            <i class="nav-icon far fa-circle"></i>
+            <p>
+              Classes
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+        <a href="{{ route('admin.gallery.index') }}" class="nav-link {{ Request::segment(2) == 'artikel' ? 'active' : '' }}">
+            <i class="nav-icon far fa-image"></i>
+            <p>
+              Gallery
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="{{ route('admin.artikel.index') }}" class="nav-link {{ Request::segment(2) == 'artikel' ? 'active' : '' }}">
             <i class="nav-icon far fa-image"></i>
             <p>
@@ -63,14 +81,14 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="{{ route('admin.agenda.index') }}" class="nav-link {{ Request::segment(2) == 'agenda' ? 'active' : '' }}">
             <i class="nav-icon fas fa-list"></i>
             <p>
               Agenda
             </p>
           </a>
-        </li>
+        </li> -->
 
         <li class="nav-header">PENGATURAN</li>
         <li class="nav-item">

@@ -9,13 +9,69 @@
     <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Laraschool | {{ $title ?? '' }}</title>
+    <title>Tunas EduPal | {{ $title ?? '' }}</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('templates/frontend/clever') }}/img/core-img/favicon.ico">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('templates/frontend/clever') }}/style.css">
+    <link rel="stylesheet" href="{{ asset('templates/frontend2/css') }}/style.css">
+
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+    <!-- TUNAS EDUPAL TEMPLATE -->
+
+    <meta charset="utf-8">
+    <title>Paud Terpadu Tunas Edupal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- TUNAS EDUPAL TEMPLATE -->
+
     @stack('css')
 </head>
 
@@ -29,18 +85,18 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
+        <!-- <div class="top-header-area d-flex justify-content-between align-items-center">
+
             <div class="contact-info">
                 <a href="#"><span>Phone:</span> +1 123 321 456 654</a>
-                <a href="#"><span>Email:</span> laraschool@example.com</a>
+                <a href="#"><span>Email:</span> tunas_edupal@gmail.com</a>
             </div>
-            <!-- Follow Us -->
+
             <div class="follow-us">
                 <span>Follow us</span>
                 <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
-        </div>
+        </div> -->
 
         <!-- Navbar Area -->
         @include('layouts.frontend.navbar')

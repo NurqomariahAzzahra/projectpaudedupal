@@ -8,11 +8,14 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\Admin\UsersController;
 
-
 //Controllers Namespace
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ClassController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PengumumanController;
 
 /*
@@ -28,15 +31,33 @@ use App\Http\Controllers\PengumumanController;
 
 //Home
 Route::get('/',[HomeController::class,'index']);
+
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/blog',[ArtikelController::class,'blog'])->name('artikel');
 
 //Artikel
 Route::get('/artikel',[ArtikelController::class,'index'])->name('artikel');
 Route::get('/artikel/search',[ArtikelController::class,'search'])->name('artikel.search');
-
 Route::get('/artikel/{artikel:slug}',[ArtikelController::class,'show'])->name('artikel.show');
+
+//Gallery
+Route::get('/gallery',[GalleryController::class,'index'])->name('gallery');
+Route::get('/gallery/search',[GalleryController::class,'search'])->name('gallery.search');
+Route::get('/gallery/{gallery:slug}',[GalleryController::class,'show'])->name('gallery.show');
+// Route::get('/gallery','GalleryController@index');
+// Route::get('/gallery/create','GalleryController@create');
+// Route::post('/gallery/store', 'GalleryController@store')->name('gallery.store');
+
+// Route::resource('gallery', GalleryController::class);
+// Route::post('/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
+
+// Route::get('/gallery',[GalleryController::class,'index'])->name('gallery');
+
+Route::get('/classes',[ClassController::class,'index']);
+Route::get('/about',[AboutController::class,'index']);
+Route::get('/contact',[ContactController::class,'index']);
 
 //Pengumuman
 Route::get('/pengumuman',[PengumumanController::class,'index'])->name('pengumuman');
@@ -55,6 +76,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth'
 		Route::resource('pengumuman','PengumumanController');
 		Route::resource('agenda','AgendaController');
 		Route::resource('artikel','ArtikelController');
+		Route::resource('gallery','GalleryController');
 		Route::resource('kategori-artikel','KategoriArtikelController');
 	});
 });

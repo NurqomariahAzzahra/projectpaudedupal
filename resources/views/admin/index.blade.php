@@ -41,7 +41,7 @@
       <div class="inner">
         <h3>@count('pengumuman')</h3>
 
-        <p>Pengumuman</p>
+        <p>Classes</p>
       </div>
       <div class="icon">
         <i class="fas fa-info"></i>
@@ -56,7 +56,7 @@
       <div class="inner">
         <h3>@count('agenda')</h3>
 
-        <p>Agenda</p>
+        <p>Gallery</p>
       </div>
       <div class="icon">
         <i class="fas fa-list"></i>

@@ -8,6 +8,11 @@ use App\Models\Artikel;
 
 class ArtikelController extends Controller
 {
+    public function blog()
+    {
+    	$artikel = Artikel::with(['user','kategoriArtikel'])->latest()->paginate(4);
+    	return view('artikel.blog',compact('artikel'));
+    }
     public function index()
     {
     	$artikel = Artikel::with(['user','kategoriArtikel'])->latest()->paginate(4);
